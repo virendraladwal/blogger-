@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @author %>
+<br>
+<br>
+<div>
+  <button type="button">
+    <%= link_to "Edit this author", edit_author_path(@author) %>
+  </button>
+
+  <button type="button">
+    <%= link_to "Back to authors", authors_path %>
+  </button>
+
+  <button type="button">
+    <%= link_to "Articles", articles_path %>
+    <%= button_to "Destroy this author", @author, method: :delete %>
+  </button>
+</div>

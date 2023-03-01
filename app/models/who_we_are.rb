@@ -1,0 +1,4 @@
+class WhoWeAre < ApplicationRecord
+
+
+end

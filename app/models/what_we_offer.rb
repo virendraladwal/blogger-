@@ -1,0 +1,2 @@
+class WhatWeOffer < ApplicationRecord
+end
