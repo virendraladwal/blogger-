@@ -144,7 +144,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_01_082552) do
   end
 
   create_table "who_we_ares", force: :cascade do |t|
+    t.string "image"
     t.string "name"
+    t.string "sub_title"
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

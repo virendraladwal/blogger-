@@ -8,10 +8,11 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
+  html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
 .mySlides {display:none}
 .w3-tag, .fa {cursor:pointer}
 .w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+.w3-top {width:1225px;padding:0;margin-top:6px}
 </style>
 </head>
 <body>
@@ -24,22 +25,28 @@ html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
 
   <div class="w3-panel">
     <h1><b>MARKETING</b></h1>
-    <p>Template by w3.css</p>
+  
   </div>
 
   <!-- Slideshow -->
   <%= render partial: 'slider' %> 
 
+
+   <!-- Grid 1 -->
+
+  <% @Offer.each_slice(4).each do |article| %>
+    <%= render 'grid1', grid1: article %>
+  <% end %>
+<!-- Grid 2 -->
   <% @pricings.each_slice(3).each do |article| %>
     <%= render 'grid2', grid2: article %>
   <% end %>
   
-  <!-- Grid 1 -->
-  <%= render partial: 'grid1' %> 
-  <!-- Grid 2 -->
-  <%= render partial: 'grid2' %> 
-  <!-- Grid -->
-  <%= render partial: 'grid3' %> 
+ <!-- Grid 3-->
+
+<% @weare.each_slice(3).each do |article| %>
+    <%= render 'grid3', grid3: article %>
+  <% end %>
   
 
   <!-- Contact -->
