@@ -3,6 +3,7 @@ class WellcomesController < ApplicationController
         @pricings = PricingPlan.all
         @Offer = WhatWeOffer.all
         @weare = WhoWeAre.all
+        @sliders = Slide.all
     end
 
 end

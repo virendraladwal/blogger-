@@ -29,7 +29,9 @@
   </div>
 
   <!-- Slideshow -->
-  <%= render partial: 'slider' %> 
+   <% @sliders.each_slice(4).each do |article| %>
+    <%= render 'slider', slider: article %>
+  <% end %>
 
 
    <!-- Grid 1 -->
